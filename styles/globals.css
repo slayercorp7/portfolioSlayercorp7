@@ -1,26 +1,42 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+.circular-btn {
+    border-radius: 30px;
+  }
+  
+  .circular-btn:hover {
+    background-color: #baccfc;
+  }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  .IeRotateSvg {
+    display: inline-block;
+    animation: rotate 2s infinite;
   }
-  body {
-    color: white;
-    background: black;
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg)
+    }
+    to {
+      transform: rotate(360deg)
+    }
   }
-}
+  .contact-button :hover{
+    display: inline-flex;
+    animation: rotate 2s normal ;
+  }
+  .svg-up {
+    position: fixed !important  ;
+    z-index: 1101;
+    top: 0px !important; /* 40px */
+  }
+  .svg-down {
+    position: fixed !important  ;
+    z-index: 1;
+    bottom: 0px !important; /* 40px */
+    right: 2.5rem;
+    justify-content: end;
+  }
